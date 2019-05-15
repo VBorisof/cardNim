@@ -1,0 +1,7 @@
+# Ides
+.idea
+.vs
+
+# Binaries
+bin
+obj

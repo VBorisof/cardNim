@@ -1,7 +1,7 @@
 using System.Linq;
 using MoreLinq;
 
-namespace CardProblem.CardProblem
+namespace CardNim
 {
     public class Move
     {

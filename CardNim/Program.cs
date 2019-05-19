@@ -1,7 +1,8 @@
 ﻿using System;
-using CSPlaypen.Extensions;
+using CardNim;
+using CardNim.Extensions;
 
-namespace CardProblem
+namespace CardNim
 {
     static class Program
     {
@@ -9,11 +10,11 @@ namespace CardProblem
         {
             var time = DateTime.Now;
             ConsoleEx.WriteLine($@"
-[~] == CARD GAME v.0.1. PPR Republic. ==== {time:HH:mm:ss} == [~]
+[~] == CARD NIM ========================== {time:HH:mm:ss} == [~]
 ", ConsoleColor.Green);
  
             time = DateTime.Now;
-            new Playpen().Run();
+            new CardNim().Run();
             var timePassed = DateTime.Now - time;
 
             ConsoleEx.WriteLine($@"

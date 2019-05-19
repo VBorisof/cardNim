@@ -1,7 +1,6 @@
-using CardProblem.CardProblem;
 using Xunit;
 
-namespace CardProblem.Tests
+namespace CardNim.Tests
 {
     public class ConfigExpectation
     {

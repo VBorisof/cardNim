@@ -1,4 +1,4 @@
-namespace CardProblem.CardProblem
+namespace CardNim
 {
     public enum CardGameState
     {

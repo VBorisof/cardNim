@@ -1,11 +1,10 @@
 using System;
 using System.Threading;
-using CardProblem.CardProblem;
-using CSPlaypen.Extensions;
+using CardNim.Extensions;
 
-namespace CardProblem
+namespace CardNim
 {
-    public class Playpen
+    public class CardNim
     {
         private CardProblemSolver _solver = new CardProblemSolver();
         
@@ -45,13 +44,15 @@ namespace CardProblem
             
             var valueKey = new ConsoleKeyInfo();
             while (!char.IsDigit(valueKey.KeyChar) 
-                   || int.Parse(valueKey.KeyChar.ToString()) < 1
-                   || int.Parse(valueKey.KeyChar.ToString()) > maxRowValue)
+                   || value < 1 || value > maxRowValue)
             {
                 Console.Write($"How much to take? [1 - {maxRowValue}]: ");            
                 valueKey = Console.ReadKey();
                 Console.WriteLine();
-                value = int.Parse(valueKey.KeyChar.ToString());
+                if (char.IsDigit(valueKey.KeyChar))
+                {
+                    value = int.Parse(valueKey.KeyChar.ToString());
+                }
             }
 
             var move = new Move(3)
@@ -93,8 +94,9 @@ namespace CardProblem
         public void Run()
         {
             ConsoleEx.WriteLine(@"
-                                 Welcome to the card game! 
+                                 Welcome to the card nim! 
 Whenever you need to move, you have to take any nonzero number of cards from one of three rows.
+                   You lose whenever you are the one to draw the last card.
                       You will play against a perfect computer opponent.
                                        Good luck...
 ", ConsoleColor.Red);

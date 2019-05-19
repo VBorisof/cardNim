@@ -1,7 +1,6 @@
 using System;
-using System.Drawing;
 
-namespace CSPlaypen.Extensions
+namespace CardNim.Extensions
 {
     public static class ConsoleEx
     {

@@ -1,4 +1,4 @@
-#CardNim
+# CardNim
 
 This is a variation of a misere [Nim][1] game.
 
